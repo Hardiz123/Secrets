@@ -59,9 +59,9 @@ app.get('/register', function (req, res) {
 
 app.get("/secrets", function (req,res) {
     if(req.isAuthenticated()){
-        res.render('secrets');
+        res.render('/secrets');
     }else{
-        res.render('/login');
+        res.redirect('/login');
     }
 })
 
